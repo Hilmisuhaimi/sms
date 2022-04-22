@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> User Profile </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+    </head>
+
+    
+        <header>
+
+            <div class="navbar">
+                <a href="admin">Home</a>
+               
+                <div class="dropdown">
+                  <button class="dropbtn">Admin
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="admin">General</a>
+                    <a href="#">Account of Admin</a>
+                    <a href="#">Account of Lecturer</a>
+                    <a href="accforstu">Account of Student</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Manage Student
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Register Student</a>
+                      <a href="#">Exam for  Student</a>
+                      <a href="#">View all Student</a>
+                      </div>
+                  </div>
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Manage Lecturer
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Register Lecturer</a>
+                       <a href="#">View all Lecturer</a>
+                      </div>
+                  </div>
+
+                <a href="logout">Logout</a> 
+            </div>
+
+             
+    
+            
+        </header>
+
+        <body align="center">
+            <p>
+               <br>
+                Create an account for new student
+
+            </br>
+
+            <form action="{{url_for ('createaccount')}}" method="POST">
+                <p>
+                    {{msg}}
+                </p>
+                
+                <input type="username" name="username" placeholder="Enter username" size="30" required >  <br> <br>
+    
+                <input type="password" name="password" placeholder="Enter password" size="30" required > <br><br>
+    
+                <input type="category" name="category" placeholder="Enter category" size="30" required> <br><br>
+    
+                <input type="submit" name="submit" value="Register">
+        
+                <input type="reset" name="reset" value="Cancel">
+        
+            </p>
+           
+            </form>
+           
+            </p>
+            
+        </body>
+
+        
+ 
+  
+
+</html>
+
+
+
