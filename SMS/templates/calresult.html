@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> User Profile </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+    </head>
+
+    
+        <header>
+
+            <div class="navbar">
+                <a href="admin">Home</a>
+               
+                <div class="dropdown">
+                  <button class="dropbtn">Admin
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="createaccount">Account of Admin</a>
+                    <a href="createaccount">Account of Student</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Manage Student
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Calculate Student Result</a>
+                      <a href="viewstudent">View all Student</a>
+                      </div>
+                  </div>
+
+
+                <a href="logout">Logout</a> 
+            </div>   
+        </header>
+
+        <body align="center">
+            <p>
+               <br>
+                Enter student result here
+
+            </br>
+
+            <form action="{{url_for ('calresult')}}" method="POST">
+                <p>
+                    {{msg}}
+                </p>
+                
+                <input type="text" name="regno" placeholder="Enter student reg no" size="30" required >  <br> <br>
+    
+                <input type="text" name="module" placeholder="Enter module" size="30" required > <br><br>
+    
+                <input type="text" name="gradeassessment" placeholder="Enter assessment grade" size="30" required> <br><br>
+    
+                <input type="text" name="gradeexam" placeholder="Enter exam grade" size="30" required> <br><br>
+    
+                <input type="text" name="finalgrade" placeholder="Enter final grade in letter" size="30" required> <br><br>
+    
+                <input type="submit" name="submit" value="Save">
+        
+                <input type="reset" name="reset" value="Cancel">
+        
+            </p>
+           
+            </form>
+           
+            </p>
+            
+        </body>
+
+</html>
+
+
+

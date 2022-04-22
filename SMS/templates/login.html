@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> User Profile </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+    </head>
+
+    <body align="center">
+
+        <img src="/SMS/templates/bckg.jpg" alt=”an artist's rendition of a black hole in space”>
+    
+
+        <h1> Welcome to Student Management System </h1>
+
+        <form action="{{url_for ('login')}}", method="POST">
+            
+        <br>
+
+        <label for="username">Enter username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+        <br><br>
+        <label for="username">Enter password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <br>
+
+        <p>
+            <input type="submit" name="submit" value="Login">
+            <input type="reset" name="reset" value="Cancel">
+        </p>
+       
+        </form>
+    </body>
+</html>

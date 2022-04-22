@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> User Profile </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+    </head>
+
+    
+        <header>
+
+            <div class="navbar">
+                <a href="student">Home</a>
+               
+                <div class="dropdown">
+                  <button class="dropbtn">Student
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="stureg">Registration form (Personal Information)</a>
+                    <a href="ststudy">Registration form (Study Information)</a>
+                    <a href="stpersonal">View Personal Information</a>
+                    <a href="ststuinfo">View Study Information</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Module
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="modulereg">Registration</a>
+                      </div>
+                  </div>
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Studies
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                       <a href="#">View Result</a>
+                      </div>
+                  </div>
+
+                <a href="logout">Logout</a> 
+            </div>
+
+             
+    
+            
+        </header>
+
+        <body align="center">
+            <p>
+               <br>
+                STUDENT STUDY INFORMATION
+                <br/>
+            </p>
+
+            {% for row in ststuinfo %}
+
+            <div class= "Degreecaregory">
+                Degree Category: {{row['dgcate']}} <br> 
+            </div>
+
+            <div class= "faculty">
+                Faculty: {{row['faculty']}} 
+
+            </div>
+
+            <div class= "degreein">
+                Degree in: {{row['dgin']}}
+            <div/>
+
+
+            <div class= "enrolldate">
+                Enroll Year: {{row['enrolldate']}} 
+
+            </div>
+            
+
+            <div class= "year">
+                Year: {{row['year']}} 
+
+            </div>
+            
+
+            <div class= "semester">
+                Semester: {{row['sem']}} 
+
+            </div>
+
+
+            <div class= "status">
+                Status: {{row['status']}} 
+
+            </div>
+
+           
+            
+            <br><br>
+
+            {% endfor %}
+
+            
+        </body>
+
+        
+ 
+  
+
+</html>

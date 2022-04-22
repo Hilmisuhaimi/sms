@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registeration-Modules</title>
+    <script src ="static/script.js"></script>
+</head>
+
+<body>
+    <div>
+        <form id="AddModules" method="POST">    
+            <h1 align="center">Registration</h1>
+                <label>1st Priority*</label>
+                <select id="first-priority" aria-label="state" required="true">
+                    <option value="" >Choose here</option>
+                    <option value="ZZ-1101">ZZ-1101</option>
+                    <option value="ZZ-1102">ZZ-1102</option>
+                    <option value="ZZ-1103">ZZ-1103</option>
+                    <option value="ZZ-1201">ZZ-1201</option>
+                    <option value="ZZ-1202">ZZ-1202</option>
+                </select>
+                <button onclick="disable_select()" id="add-btn" type="button">+add</button>
+                <button onclick="disable_select()" id="cancel-btn" type="button">cancel</button>
+            <div>
+                <label>2nd Priority*</label>
+                <select id="second-priority" aria-label="state" required="true">
+                    <option value="" >Choose here</option>
+                    <option value="ZZ-1101">ZZ-1101</option>
+                    <option value="ZZ-1102">ZZ-1102</option>
+                    <option value="ZZ-1103">ZZ-1103</option>
+                    <option value="ZZ-1201">ZZ-1201</option>
+                    <option value="ZZ-1202">ZZ-1202</option>
+                </select>
+                <button onclick="disable_select_2()" id="add-btn2" type="button">+add</button>
+                <button onclick="disable_select_2()" id="cancel-btn2" type="button">cancel</button>
+
+            </div>
+            <div>
+                <label>3rd Priority*</label>
+                <select id="third-priority" aria-label="state" required="true">
+                    <option value="" >Choose here</option>
+                    <option value="ZZ-1101">ZZ-1101</option>
+                    <option value="ZZ-1102">ZZ-1102</option>
+                    <option value="ZZ-1103">ZZ-1103</option>
+                    <option value="ZZ-1201">ZZ-1201</option>
+                    <option value="ZZ-1202">ZZ-1202</option>
+                </select>
+                <button onclick="disable_select_3()" id="add-btn3" type="button">+add</button>
+                <button onclick="disable_select_3()" id="cancel-btn3" type="button">cancel</button>
+            </div>
+            <div>
+                <label>4th Priority*</label>
+                <select id="fourth-priority" aria-label="state" required="true">
+                    <option value="" >Choose here</option>
+                    <option value="ZZ-1101">ZZ-1101</option>
+                    <option value="ZZ-1102">ZZ-1102</option>
+                    <option value="ZZ-1103">ZZ-1103</option>
+                    <option value="ZZ-1201">ZZ-1201</option>
+                    <option value="ZZ-1202">ZZ-1202</option>
+                </select>
+                <button onclick="disable_select_4()" id="add-btn4" type="button">+add</button>
+                <button onclick="disable_select_4()" id="cancel-btn4" type="button">cancel</button>
+            </div>
+            <div>
+                <label>5th Priority</label>
+                <select id="fifth-priority" aria-label="state">
+                    <option value="" >Choose here</option>
+                    <option value="ZZ-1101">ZZ-1101</option>
+                    <option value="ZZ-1102">ZZ-1102</option>
+                    <option value="ZZ-1103">ZZ-1103</option>
+                    <option value="ZZ-1201">ZZ-1201</option>
+                    <option value="ZZ-1202">ZZ-1202</option>
+                </select>
+                <button onclick="disable_select_5()" id="add-btn5" type="button">+add</button>
+                <button onclick="disable_select_5()" id="cancel-btn5" type="button">cancel</button>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> User Profile </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+    </head>
+
+    
+    <header>
+
+        <div class="navbar">
+            <a href="student">Home</a>
+           
+            <div class="dropdown">
+              <button class="dropbtn">Student
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="stureg">Registration form (Personal Information)</a>
+                <a href="ststudy">Registration form (Study Information)</a>
+                <a href="stpersonal">View Personal Information</a>
+                <a href="ststuinfo">View Study Information</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Module
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="modulereg">Registration</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Studies
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                   <a href="#">View Result</a>
+                  </div>
+              </div>
+
+            <a href="logout">Logout</a> 
+        </div>
+
+         
+
+        
+    </header>
+
+        <body align="center">
+            <p>
+               <br>
+                Registration form of Student that will be filled by Admin section
+
+            </br>
+
+        <form action="{{url_for ('stureg')}}" method="POST">
+            <p>
+                {{msg}}
+            </p>
+            
+            <input type="text" name="regno" placeholder="Enter student reg no" size="30" required >  <br> <br>
+
+            <input type="text" name="name" placeholder="Enter student name" size="30" required >  <br> <br>
+
+            <input type="text" name="ic" placeholder="Enter student IC no" size="30" required > <br><br>
+
+            <input type="text" name="dob" placeholder="Enter Student DOB" size="30" required > <br><br>
+
+            <input type="text" name="address" placeholder="Enter Student Address" size="30" required > <br><br>
+
+            <input type="email" name="email" placeholder="Enter Student email" size="30" required> <br><br>
+
+            <input type="submit" name="submit" value="Register">
+    
+            <input type="reset" name="reset" value="Cancel">
+    
+        </p>
+       
+        </form>
+           
+            </p>
+            
+        </body>
+
+        
+ 
+  
+
+</html>
+
+
+
+
+

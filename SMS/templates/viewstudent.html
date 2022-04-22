@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> User Profile </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+    </head>
+
+    
+        <header>
+
+            <div class="navbar">
+                <a href="admin">Home</a>
+               
+                <div class="dropdown">
+                  <button class="dropbtn">Admin
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="createaccount">Account of Admin</a>
+                    <a href="createaccount">Account of Student</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Manage Student
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="calresult">Calculate Student Result</a>
+                      <a href="viewstudent"">View all Student</a>
+                      </div>
+                  </div>
+
+                <a href="logout">Logout</a> 
+            </div>
+
+        </header>
+
+        <body align="center">
+            <p>
+               <br>
+                VIEW ALL STUDENT
+                <br/>
+            </p>
+
+            {% for row in stperinfo %}
+
+            <div class= "name">
+                Name: {{row['name']}} <br> 
+            </div>
+
+            <div class= "regno">
+                Reg no: {{row['regno']}} <br> <br>
+
+
+
+            </div>
+
+            {% endfor %}
+
+            <br>
+
+
+            
+        </body>
+
+        
+ 
+  
+
+</html>
